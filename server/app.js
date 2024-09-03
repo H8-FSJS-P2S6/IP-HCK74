@@ -1,24 +1,23 @@
 require("dotenv").config();
 
-const cors = require("cors");
 const express = require("express");
 const app = express();
+const port = 3000;
 
 const errorHandler = require("./middlewares/errorHandler");
 const router = require("./routers");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
 
-app.get("/test", (req, res) => {
-  req.status(200).json({
-    message: "test",
-  });
+app.get("/", (req, res) => {
+  res.send("Hello World!");
 });
 
 app.use("/", router);
 
 app.use(errorHandler);
 
-module.exports = app;
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});

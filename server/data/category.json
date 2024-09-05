@@ -6,12 +6,12 @@
   },
   {
     "title": "Meja",
-    "imgUrl": "meja",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz0RA98J64pTj-Qlh6byprX2Lf7Gy58GKgog&s",
     "description": "Kategori Meja"
   },
   {
     "title": "Kasur",
-    "imgUrl": "kasur",
+    "imgUrl": "https://res.cloudinary.com/ruparupa-com/image/upload/w_360,h_360,f_auto,q_auto/f_auto,q_auto:eco/Products/10434041_2.jpg",
     "description": "Kategori Kasur"
   }
 ]

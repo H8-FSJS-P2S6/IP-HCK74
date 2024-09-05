@@ -23,7 +23,7 @@ class productController {
     try {
       const {
         page = 1,
-        limit = 10,
+        limit = 5,
         sortBy = "id",
         order = "ASC",
         category,
@@ -127,73 +127,6 @@ class productController {
           message: `Id ${id} success to delete`,
         });
       }
-    } catch (error) {
-      next(error);
-    }
-  }
-
-  static async getProductPub(req, res, next) {
-    try {
-      const { search, filter, sort, page } = req.query;
-
-      const paramsQuery = {};
-
-      if (search) {
-        paramsQuery.where = {
-          title: {
-            [Op.iLike]: `%${search}%`,
-          },
-        };
-      }
-      if (filter) {
-        let temp = filter.split(",").map((el) => Number(el));
-        paramsQuery.where = {
-          categoryId: {
-            [Op.in]: temp,
-          },
-        };
-      }
-      if (filter && search) {
-        paramsQuery.where = {
-          title: {
-            [Op.iLike]: `%${search}%`,
-          },
-          categoryId: filter,
-        };
-      }
-      if (sort) {
-        const ordering = sort[0] === "-" ? "DESC" : "ASC";
-        const columnName = ordering === "DESC" ? sort.slice(1) : sort;
-        paramsQuery.order = [[columnName, ordering]];
-      }
-      let limit = 10;
-      let pageNumber = 1;
-
-      if (page) {
-        if (page.size) {
-          limit = page.size;
-          paramsQuery.limit = limit;
-        }
-
-        if (page.number) {
-          pageNumber = page.number;
-          paramsQuery.offset = limit * (pageNumber - 1);
-        }
-      } else {
-        paramsQuery.limit = limit;
-        paramsQuery.offset = limit * (pageNumber - 1);
-      }
-
-      const { count, rows } = await Product.findAncCountAll(paramsQuery);
-      // console.log(rows);
-
-      res.status(200).json({
-        page: +pageNumber,
-        data: rows,
-        totalData: count,
-        totalPage: Math.ceil(count / limit),
-        dataPerPage: +limit,
-      });
     } catch (error) {
       next(error);
     }

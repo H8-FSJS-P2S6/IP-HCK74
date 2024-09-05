@@ -6,5 +6,77 @@
     "price": 70000,
     "categoryId": 1,
     "userId": 1
+  },
+  {
+    "title": "Meja Minimalis",
+    "description": "Meja minimalis yang cocok untuk ruang tamu",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz0RA98J64pTj-Qlh6byprX2Lf7Gy58GKgog&s",
+    "price": 150000,
+    "categoryId": 2,
+    "userId": 1
+  },
+  {
+    "title": "Kasur Nyaman",
+    "description": "Kasur ini memberikan kenyamanan tidur yang maksimal",
+    "imgUrl": "https://res.cloudinary.com/ruparupa-com/image/upload/w_360,h_360,f_auto,q_auto/f_auto,q_auto:eco/Products/10434041_2.jpg",
+    "price": 500000,
+    "categoryId": 3,
+    "userId": 1
+  },
+  {
+    "title": "Kursi Makan",
+    "description": "Kursi makan elegan dengan desain modern",
+    "imgUrl": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/6/9/2b2a8a2a-4b5d-4f83-9ef9-9f51c14eac91.jpg",
+    "price": 85000,
+    "categoryId": 1,
+    "userId": 1
+  },
+  {
+    "title": "Meja Belajar",
+    "description": "Meja belajar praktis dengan banyak penyimpanan",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysElqk2Z5B6Tf_Dqk49PS3HgMQmKPmGgyPg&s",
+    "price": 200000,
+    "categoryId": 2,
+    "userId": 1
+  },
+  {
+    "title": "Kasur King Size",
+    "description": "Kasur ukuran besar dengan kualitas premium",
+    "imgUrl": "https://res.cloudinary.com/ruparupa-com/image/upload/w_360,h_360,f_auto,q_auto/f_auto,q_auto:eco/Products/10434041_3.jpg",
+    "price": 700000,
+    "categoryId": 3,
+    "userId": 1
+  },
+  {
+    "title": "Kursi Kantor",
+    "description": "Kursi kantor ergonomis untuk kenyamanan bekerja",
+    "imgUrl": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/6/9/47b8c82b-81d9-466d-bb8f-52de738fa13c.jpg",
+    "price": 95000,
+    "categoryId": 1,
+    "userId": 1
+  },
+  {
+    "title": "Meja Kopi",
+    "description": "Meja kopi kecil yang cocok untuk ruang santai",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWzYZ8dPoDO4wlUR9iB6V77eZJvfcUIpPqvw&s",
+    "price": 125000,
+    "categoryId": 2,
+    "userId": 1
+  },
+  {
+    "title": "Kasur Single",
+    "description": "Kasur single untuk anak-anak atau tamu",
+    "imgUrl": "https://res.cloudinary.com/ruparupa-com/image/upload/w_360,h_360,f_auto,q_auto/f_auto,q_auto:eco/Products/10434041_4.jpg",
+    "price": 400000,
+    "categoryId": 3,
+    "userId": 1
+  },
+  {
+    "title": "Kursi Goyang",
+    "description": "Kursi goyang nyaman untuk bersantai di teras",
+    "imgUrl": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/6/9/978ee1c8-37e5-431a-b2e4-17b680e750f1.jpg",
+    "price": 120000,
+    "categoryId": 1,
+    "userId": 1
   }
 ]

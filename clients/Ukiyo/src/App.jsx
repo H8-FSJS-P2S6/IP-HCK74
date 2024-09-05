@@ -9,19 +9,24 @@ import LoginPage from "./LoginPage.jsx";
 import Services from "./service.jsx";
 import Register from "./Register.jsx";
 import MainPage from "./mainpage.jsx";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import { Outlet } from "react-router-dom";
+import Admin from "./admin/admin.jsx";
 
 function App() {
   return (
     <>
-      <Router>
-        <Routes>
-          {/* ... other routes */}
-          <Route path="/" element={<MainPage />} />
-          <Route path="/services" element={<Service />} />
-          <Route path="/a" element={<LoginPage />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </Router>
+      <GoogleOAuthProvider clientId="1061303935747-28c56k1bnv4u9tokda2vp8a1oh2r8p15.apps.googleusercontent.com">
+        <Router>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/services" element={<Service />} />
+            <Route path="/a" element={<LoginPage />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/admin" element={<Admin />} />
+          </Routes>
+        </Router>
+      </GoogleOAuthProvider>
     </>
   );
 }

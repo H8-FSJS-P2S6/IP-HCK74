@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios"; // Assuming you're using Axios for API calls
+import React, { useState, useEffect, useRef } from "react";
+import axios from "axios";
 
 const ChatButton = () => {
   const [isChatVisible, setIsChatVisible] = useState(true);
@@ -18,31 +18,24 @@ const ChatButton = () => {
       setUserInput("");
 
       try {
-        const response = await axios.post(
-          "https://api.openai.com/v1/chat/completions",
-          {
-            model: "gpt-3.5-turbo",
-            messages: messages,
-          },
-          {
-            headers: {
-              Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-            },
-          }
-        );
+        const response = await axios.post("http://localhost:3000/api", {
+          messages: messages,
+        });
 
         setMessages([
           ...messages,
-          {
-            role: "assistant",
-            content: response.data.choices[0].message.content,
-          },
+          { role: "system", content: response.data.response },
         ]);
       } catch (error) {
         console.error("Error:", error);
       }
     }
+
+    // Scroll to bottom after adding a new message
+    chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
   };
+
+  const chatBoxRef = useRef(null);
 
   return (
     <div className="fixed bottom-5 right-5">
@@ -53,21 +46,23 @@ const ChatButton = () => {
         Chat
       </button>
       {isChatVisible && (
-        <div className="absolute bottom-10 right-10 bg-white rounded-lg shadow-md p-4 max-h-screen overflow-y-auto">
-          <ul>
+        <div
+          className="chatbox absolute bottom-10 right-10 bg-white rounded-lg shadow-md p-4 max-h-[400px] max-w-[300px] overflow-y-auto overflow-x-hidden"
+          ref={chatBoxRef}
+        >
+          <ul className="chat-list">
             {messages.map((msg, index) => (
-              <li key={index}>
-                <p
-                  className={
-                    msg.role === "system" ? "text-gray-700" : "text-blue-500"
-                  }
-                >
-                  {msg.content}
-                </p>
+              <li
+                key={index}
+                className={`chat-message ${
+                  msg.role === "user" ? "chat-message-right" : ""
+                }`}
+              >
+                <p className="chat-message-content">{msg.content}</p>
               </li>
             ))}
           </ul>
-          <div className="flex mt-4">
+          <div className="flex mt-4 w-max h-max">
             <input
               type="text"
               id="userInput"
@@ -75,10 +70,16 @@ const ChatButton = () => {
               placeholder="Enter your message"
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  sendMessage();
+                }
+              }}
             />
             <button
               className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg ml-2"
               onClick={sendMessage}
+              disabled={!userInput.trim()}
             >
               Send
             </button>

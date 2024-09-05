@@ -403,3 +403,34 @@ textarea.form-control {
     margin-bottom: 10px;
   }
 }
+
+/*Chatbox CSS*/
+.chat-list {
+  padding: 0;
+  list-style: none;
+}
+
+.chat-message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.chat-message-right {
+  justify-content: flex-end;
+  text-align: right;
+  background-color: #abc4ee;
+}
+
+.chat-message-left {
+  justify-content: flex-start;
+  text-align: left;
+  background-color: #072a48;
+}
+
+.chat-message-content {
+  max-width: 80%;
+  padding: 5px 10px;
+}

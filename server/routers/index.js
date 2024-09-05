@@ -1,8 +1,20 @@
 const express = require("express");
 const router = express.Router();
+const cors = require("cors");
+
 const userController = require("../controllers/userController");
 const productController = require("../controllers/productController");
 const categoryController = require("../controllers/categoryController");
+
+router.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
+
+router.post("/google-login", (req, res) => {
+  res.json({ message: "Login successful" });
+});
 
 router.post("/register", userController.register);
 router.post("/login", userController.login);
@@ -18,5 +30,7 @@ router.get("/category", categoryController.findAllCategory);
 router.get("/category/:id", categoryController.findCategoryById);
 router.put("/category/:id", categoryController.editCategory);
 router.delete("/category/:id", categoryController.deleteCategory);
+
+router.post("/google-login", userController.googleLogin);
 
 module.exports = router;

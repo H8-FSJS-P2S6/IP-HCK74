@@ -11,10 +11,10 @@ const About = () => {
         </div>
         <ul className="timeline">
           <li>
-            <div className="timeline-image">
+            <div className=" timeline-image">
               <img
-                className="rounded-circle img-fluid"
-                src="../src/assets/img/about/1.jpg"
+                className=" rounded-circle img-fluid"
+                src="/1.jpg"
                 alt="..."
               />
             </div>
@@ -37,7 +37,7 @@ const About = () => {
             <div className="timeline-image">
               <img
                 className="rounded-circle img-fluid"
-                src="../src/assets/img/about/2.jpg"
+                src="/2.jpg"
                 alt="..."
               />
             </div>
@@ -60,7 +60,7 @@ const About = () => {
             <div className="timeline-image">
               <img
                 className="rounded-circle img-fluid"
-                src="../src/assets/img/about/3.jpg"
+                src="/3.jpg"
                 alt="..."
               />
             </div>
@@ -83,7 +83,7 @@ const About = () => {
             <div className="timeline-image">
               <img
                 className="rounded-circle img-fluid"
-                src="../src/assets/img/about/4.jpg"
+                src="/4.jpg"
                 alt="..."
               />
             </div>

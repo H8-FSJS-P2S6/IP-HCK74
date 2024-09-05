@@ -16,7 +16,7 @@ const Services = () => {
             </span>
             <img
               className="rounded-lg w-40 h-40 mb-4"
-              src="../src/assets/consult.jpg"
+              src="/consult.jpg"
               alt="Consult"
             />
             <h3 className="text-xl font-bold mb-2">Consult</h3>
@@ -33,7 +33,7 @@ const Services = () => {
             </span>
             <img
               className="rounded-lg w-40 h-40 mb-4"
-              src="../src/assets/surpey.jpg"
+              src="/surpey.jpg"
               alt="Survey"
             />
             <h3 className="text-xl font-bold mb-2">Survey</h3>
@@ -50,7 +50,7 @@ const Services = () => {
             </span>
             <img
               className="rounded-lg w-40 h-40 mb-4"
-              src="../src/assets/surpey.jpg"
+              src="/surpey.jpg"
               alt="Web Security"
             />
             <h3 className="text-xl font-bold mb-2">Web Security</h3>

@@ -6,7 +6,7 @@ const Team = () => {
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">Our Team</h2>
         <p className="text-lg text-center text-gray-500 mb-16">
-          Lorem ipsum dolor sit amet consectetur.
+          THIS IS OUR TEAM
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center text-center p-4 h-full">
@@ -16,15 +16,11 @@ const Team = () => {
             </span>
             <img
               className="rounded-lg w-40 h-40 mb-4"
-              src="../src/assets/consult.jpg"
+              src="12.jpg"
               alt="Consult"
             />
-            <h3 className="text-xl font-bold mb-2">Caitlyn</h3>
-            <p className="text-gray-500 flex-grow">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
-            </p>
+            <h3 className="text-xl font-bold mb-2">Patricia</h3>
+            <p className="text-gray-500 flex-grow">CEO</p>
           </div>
           <div className="flex flex-col items-center text-center p-4 h-full">
             <span className="fa-stack fa-4x mb-4">
@@ -33,15 +29,11 @@ const Team = () => {
             </span>
             <img
               className="rounded-lg w-40 h-40 mb-4"
-              src="../src/assets/surpey.jpg"
+              src="11.jpg"
               alt="Survey"
             />
-            <h3 className="text-xl font-bold mb-2">Jovan</h3>
-            <p className="text-gray-500 flex-grow">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
-            </p>
+            <h3 className="text-xl font-bold mb-2">John</h3>
+            <p className="text-gray-500 flex-grow">Manager </p>
           </div>
           <div className="flex flex-col items-center text-center p-4 h-full">
             <span className="fa-stack fa-4x mb-4">
@@ -50,15 +42,11 @@ const Team = () => {
             </span>
             <img
               className="rounded-lg w-40 h-40 mb-4"
-              src="../src/assets/surpey.jpg"
+              src="13.jpg"
               alt="Web Security"
             />
-            <h3 className="text-xl font-bold mb-2">Kevin</h3>
-            <p className="text-gray-500 flex-grow">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
-            </p>
+            <h3 className="text-xl font-bold mb-2">Josh</h3>
+            <p className="text-gray-500 flex-grow">Consultant</p>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import service from "./service.jsx";
 
 const Navbar = () => {
   const [isNavbarScrolled, setIsNavbarScrolled] = useState(false);
@@ -22,44 +23,45 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 bg-dark w-full z-10 ${
-        isNavbarScrolled ? "navbar-scrolled bg-gray-500" : ""
-      }`}
+      className={`fixed   
+ top-0 bg-dark w-full z-10 ${
+   isNavbarScrolled ? "navbar-scrolled bg-gray-500" : ""
+ }`}
     >
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
-          <a className="navbar-brand" href="/home">
+          <a className="navbar-brand" href="/">
             <img
-              src="../src/assets/logo.jpeg"
+              src="../logo.jpeg"
               alt="Logo"
               className="h-12 sm:h-16 lg:h-20"
             />
           </a>
           <div className="hidden md:flex space-x-8">
-            <Link
-              to="/services"
+            <a
+              href="#service"
               className="text-black font-bold hover:text-white"
             >
               Services
-            </Link>
-            <Link
-              to="/portfolio"
+            </a>
+            <a
+              href="#portfolio"
               className="text-black font-bold hover:text-white"
             >
               Portfolio
-            </Link>
-            <Link to="/about" className="text-black font-bold hover:text-white">
+            </a>
+            <a href="#about" className="text-black font-bold hover:text-white">
               About
-            </Link>
-            <Link to="/team" className="text-black font-bold hover:text-white">
+            </a>
+            <a href="#Team" className="text-black font-bold hover:text-white">
               Team
-            </Link>
-            <Link
-              to="/contact"
+            </a>
+            <a
+              href="#contact"
               className="text-black font-bold hover:text-white"
             >
               Contact
-            </Link>
+            </a>
           </div>
           <div className="hidden md:flex space-x-5">
             <Link
@@ -67,12 +69,6 @@ const Navbar = () => {
               className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700"
             >
               Login
-            </Link>
-            <Link
-              to="/register"
-              className="bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700"
-            >
-              Register
             </Link>
           </div>
           <div className="md:hidden">
@@ -85,7 +81,8 @@ const Navbar = () => {
               >
                 <path
                   fillRule="evenodd"
-                  d="M3 5a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2zm10 0a2 2 0 012 2v10a2 2 0 01-2 2H13a2 2 0 01-2-2V7a2 2 0 012-2zm4 0a2 2 0 012 2v10a2 2 0 01-2 2H17a2 2 0 01-2-2V7a2 2 0 012-2z"
+                  d="M3  
+ 5a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2zm10 0a2 2 0 012 2v10a2 2 0 01-2 2H13a2 2 0 01-2-2V7a2 2 0 012-2zm4 0a2 2 0 012 2v10a2 2 0 01-2 2H17a2 2 0 01-2-2V7a2 2 0 012-2z"
                   clipRule="evenodd"
                 />
               </svg>

@@ -8,7 +8,7 @@ const Clients = () => {
           <a href="#!">
             <img
               className="w-40 h-40 mb-4 img-fluid img-brand d-block mx-auto"
-              src="../src/assets/img/logos/microsoft.svg"
+              src="../microsoft.svg"
               alt="..."
               aria-label="Microsoft Logo"
             />
@@ -18,7 +18,7 @@ const Clients = () => {
           <a href="#!">
             <img
               className="w-40 h-40 mb-4 img-fluid img-brand d-block mx-auto"
-              src="../src/assets/img/logos/google.svg"
+              src="../google.svg"
               alt="..."
               aria-label="Google Logo"
             />
@@ -28,7 +28,7 @@ const Clients = () => {
           <a href="#!">
             <img
               className="w-40 h-40 mb-4 img-fluid img-brand d-block mx-auto"
-              src="../src/assets/img/logos/facebook.svg"
+              src="../facebook.svg"
               alt="..."
               aria-label="Facebook Logo"
             />
@@ -38,7 +38,7 @@ const Clients = () => {
           <a href="#!">
             <img
               className="w-40 h-40 mb-4 img-fluid img-brand d-block mx-auto"
-              src="../src/assets/img/logos/ibm.svg"
+              src="../ibm.svg"
               alt="..."
               aria-label="IBM Logo"
             />

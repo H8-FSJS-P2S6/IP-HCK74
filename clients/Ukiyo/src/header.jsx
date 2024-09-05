@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header
       className="bg-cover bg-center bg-no-repeat opacity-90"
-      style={{ backgroundImage: `url('../src/assets/b3.jpeg')` }}
+      style={{ backgroundImage: `url('/b3.jpeg')` }}
     >
       <div className="container mx-auto text-center py-72">
         <h2 className="leading-[1px] font-mono text-3xl font-bold text-black mb-4">

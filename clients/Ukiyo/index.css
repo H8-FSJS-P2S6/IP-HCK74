@@ -2,10 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Login*/
+.login-container {
+  background: linear-gradient(to bottom, #e3ece5, #d1d5d5);
+}
+
+.login-card {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px; /* Increase padding for more space */
+  border-radius: 12px;
+  width: 350px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #166de3;
+  border-color: #007bff;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+button {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+.register-container {
+  background: linear-gradient(to bottom, #e3ece5, #d1d5d5);
+  flex: 1; /* Take up available space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.register-card {
+  max-width: 400px; /* Adjust width as needed */
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+}
+
 .portfolio-item {
   min-height: 50vh; /* 50% of the viewport height */
   max-height: 50vh; /* No taller than 70% of the viewport height */
 }
+
+.portfolio-item:hover .portfolio-hover {
+  display: flex;
+}
+
 .navbar-scrolled {
   padding-top: 15px;
   margin-bottom: 20px;
@@ -87,7 +151,7 @@
 
 .timeline > li .timeline-image {
   position: absolute;
-  z-index: 100;
+  z-index: auto;
   left: 50%;
   width: 100px;
   height: 100px;
@@ -177,7 +241,6 @@
   background: #2c3e50;
   color: white;
   padding: 80px 0;
-  background-image: url("path_to_your_background_image"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
 }

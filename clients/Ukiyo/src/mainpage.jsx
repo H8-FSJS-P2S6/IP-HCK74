@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./nav.jsx";
 import Header from "./header.jsx";
-import Portfolio from "./portofolio.jsx";
+import Portfolio from "./category.jsx";
 import Service from "./service.jsx";
 import About from "./about.jsx";
 import Team from "./team.jsx";
@@ -10,6 +10,7 @@ import Contact from "./Contact.jsx";
 import Footer from "./Footer.jsx";
 import ChatButton from "./ChatButton.jsx";
 import Shop from "./ProductCard.jsx";
+import Category from "./category.jsx";
 
 const MainPage = () => {
   return (
@@ -22,7 +23,7 @@ const MainPage = () => {
       <Navbar />
       <Header />
       <Service />
-      <Portfolio />
+      <Category />
       <About />
       <Team />
       <Contact />

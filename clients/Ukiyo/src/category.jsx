@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const Portfolio = () => {
+const Category = () => {
   const [category, setCategory] = useState([]);
   const fetchCategory = async () => {
     try {
@@ -72,4 +72,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Category;

@@ -1,9 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import service from "./service.jsx";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isNavbarScrolled, setIsNavbarScrolled] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check if the user is logged in by verifying if a token exists
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  // Handle sign out
+  const handleSignOut = () => {
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+    navigate("/"); // Redirect to home page after sign out
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,10 +39,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed   
- top-0 bg-dark w-full z-10 ${
-   isNavbarScrolled ? "navbar-scrolled bg-gray-500" : ""
- }`}
+      className={`fixed top-0 w-full z-10 ${
+        isNavbarScrolled ? "navbar-scrolled bg-gray-500" : "bg-dark"
+      }`}
     >
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
@@ -64,12 +79,21 @@ const Navbar = () => {
             </a>
           </div>
           <div className="hidden md:flex space-x-5">
-            <Link
-              to="/a"
-              className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700"
-            >
-              Login
-            </Link>
+            {isLoggedIn ? (
+              <button
+                onClick={handleSignOut}
+                className="bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700"
+              >
+                Sign Out
+              </button>
+            ) : (
+              <Link
+                to="/a"
+                className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700"
+              >
+                Login
+              </Link>
+            )}
           </div>
           <div className="md:hidden">
             <button className="navbar-toggler flex items-center justify-center p-2 text-gray-700 rounded">
@@ -81,8 +105,7 @@ const Navbar = () => {
               >
                 <path
                   fillRule="evenodd"
-                  d="M3  
- 5a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2zm10 0a2 2 0 012 2v10a2 2 0 01-2 2H13a2 2 0 01-2-2V7a2 2 0 012-2zm4 0a2 2 0 012 2v10a2 2 0 01-2 2H17a2 2 0 01-2-2V7a2 2 0 012-2z"
+                  d="M3 5a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2zm10 0a2 2 0 012 2v10a2 2 0 01-2 2H13a2 2 0 01-2-2V7a2 2 0 012-2zm4 0a2 2 0 012 2v10a2 2 0 01-2 2H17a2 2 0 01-2-2V7a2 2 0 012-2z"
                   clipRule="evenodd"
                 />
               </svg>

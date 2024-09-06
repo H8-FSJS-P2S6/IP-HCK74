@@ -5,6 +5,7 @@ import LoginPage from "./LoginPage.jsx";
 import Register from "./Register.jsx";
 import MainPage from "./mainpage.jsx";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import Admin from "./admin/admin.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<MainPage />} />
             <Route path="/a" element={<LoginPage />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </Router>
       </GoogleOAuthProvider>

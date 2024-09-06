@@ -4,12 +4,15 @@ const genAI = new GoogleGenerativeAI(process.env.gemini_key);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 class apiController {
-  static async Gemini(req, res, next) {
+  static async gemini(req, res, next) {
     try {
-      const prompt = "Give me interior design.";
+      const { messages } = req.body;
+      console.log(messages, "?????");
+      const prompt = messages;
+      console.log(prompt, "<<<<<<");
 
       const result = await model.generateContent(prompt);
-      console.log(result.response.text());
+      res.send(result.response.text());
     } catch (error) {
       next();
     }

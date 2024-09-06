@@ -5,6 +5,7 @@ const cors = require("cors");
 const userController = require("../controllers/userController");
 const productController = require("../controllers/productController");
 const categoryController = require("../controllers/categoryController");
+const apiController = require("../controllers/apiController");
 
 router.use(
   cors({
@@ -30,6 +31,8 @@ router.get("/category", categoryController.findAllCategory);
 router.get("/category/:id", categoryController.findCategoryById);
 router.put("/category/:id", categoryController.editCategory);
 router.delete("/category/:id", categoryController.deleteCategory);
+
+router.post("/api", apiController.gemini);
 
 router.post("/google-login", userController.googleLogin);
 

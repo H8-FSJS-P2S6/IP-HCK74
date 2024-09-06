@@ -14,6 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "postgresql": "//postgres.greebbfohztvetzpldsz:HBo7wi02C0setiFV@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres"
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres"
   }
 }

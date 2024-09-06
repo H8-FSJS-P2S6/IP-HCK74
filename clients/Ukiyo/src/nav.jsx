@@ -60,10 +60,10 @@ const Navbar = () => {
               Services
             </a>
             <a
-              href="#portfolio"
+              href="#category"
               className="text-black font-bold hover:text-white"
             >
-              Portfolio
+              Category
             </a>
             <a href="#about" className="text-black font-bold hover:text-white">
               About

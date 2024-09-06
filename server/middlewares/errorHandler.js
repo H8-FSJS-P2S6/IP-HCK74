@@ -1,7 +1,7 @@
 module.exports = (error, req, res, next) => {
   let status = error.status || 500,
     message = error.message || "Internal Server Error";
-  //   console.log(error.name, error.message, error.status, "iini error handler");
+  console.log(error);
 
   switch (error.name) {
     case "emailorpasswordempty":
